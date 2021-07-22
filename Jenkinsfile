@@ -30,7 +30,8 @@ stage('Docker Build and Tag') {
  stage('Run Docker container on remote hosts') {
              
             steps {
-                sh " ssh ec2-user@172.31.8.18 "
+                sshagent(['Application']) {
+       
  
             }
         }
