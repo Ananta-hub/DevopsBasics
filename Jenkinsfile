@@ -21,7 +21,7 @@ pipeline {
         }stage('Docker Build and Tag') {
            steps {
               
-                sh 'docker build -t cutomimage .
+                sh 'docker build -t cutomimage .'
                
           }
         }
