@@ -18,7 +18,8 @@ pipeline {
              
                 sh 'mvn package'             
           }
-        }stage('Docker Build and Tag') {
+        }
+stage('Docker Build and Tag') {
            steps {
               
                 sh 'docker build -t cutomimage .'
