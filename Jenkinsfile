@@ -31,7 +31,7 @@ stage('Docker Build and Tag') {
              
             steps {
                 sshagent(['Application']) {
-       
+                  sh 'ssh -o StrictHostKeyChecking=no -l ec2-user@172.31.8.18 uname -a'      
  
             }
         }
