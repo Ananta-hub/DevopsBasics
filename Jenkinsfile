@@ -30,7 +30,7 @@ stage('Docker Build and Tag') {
  stage('Run Docker container on remote hosts') {
              
             steps {
-                sh " ssh ec2-user@172.31.8.18  run -d -p 8003:8080 cutomimage"
+                sh " ssh ec2-user@172.31.8.18 "
  
             }
         }
