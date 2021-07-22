@@ -22,7 +22,7 @@ pipeline {
 stage('Docker Build and Tag') {
            steps {
               
-                sh 'docker build -t cutomimage .'
+                sh ' sudo docker build -t cutomimage .'
                
           }
         }
