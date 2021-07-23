@@ -1,8 +1,4 @@
 pipeline {
-  environment {
-    registry = "gitlab.01cloud.com:5005/thomas/freshman"
-    registryCredential = ‘-UxK3yHwK-2XHmRnyWWH’
-    }
     agent any
    tools
     {
@@ -25,7 +21,7 @@ pipeline {
 stage('Docker Build and Tag') {
            steps {
                sh 'docker build -t cutomimage .' 
-                sh 'docker tag cutomimage gitlab.01cloud.com:5005/thomas/freshman:latest'
+                sh 'docker tag cutomimage  anantapranjali/cutomimage:latest'
                
           }
         }
@@ -34,8 +30,8 @@ stage('Docker Build and Tag') {
 stage('Publish image to Docker Hub') {
           
             steps {
-        withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
-          sh  'docker push gitlab.01cloud.com:5005/thomas/freshman:latest'
+        withDockerRegistry([ credentialsId: "Admin@1$123", url: "" ]) {
+          sh  'docker push  anantapranjali/cutomimage:latest '
         }
                   
           }
