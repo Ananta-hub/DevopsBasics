@@ -30,8 +30,8 @@ stage('Docker Build and Tag') {
  stage('Run Docker container on remote hosts') {
              
             steps {
-                sshagent(['34.201.11.234']) {
-                  sh 'ssh -o StrictHostKeyChecking=no -l ec2-user@34.201.11.234 uname -a'      
+                sshagent(['Application']) {
+                  sh 'ssh -o StrictHostKeyChecking=no -l ec2-user@172.31.8.18 uname -a'      
 
  
             }
